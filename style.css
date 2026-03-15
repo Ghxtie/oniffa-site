@@ -1,61 +1,37 @@
-/* style.css */
-body {
-  margin: 0;
-  font-family: Arial, sans-serif;
-  background: #0f0f14;
-  color: white;
-}
-
-nav {
-  background: #151520;
-  padding: 20px;
-  text-align: center;
-}
-
-nav a {
-  color: white;
-  text-decoration: none;
-  margin: 0 15px;
-  font-weight: bold;
-}
-
-nav a:hover {
-  color: #8b5cf6;
-}
-
-.hero {
-  text-align: center;
-  padding: 80px 20px;
-}
-
-.button {
-  background: #8b5cf6;
-  color: white;
-  padding: 12px 25px;
-  border-radius: 6px;
-  text-decoration: none;
-  font-weight: bold;
-  display: inline-block;
-  margin: 10px;
-}
-
-.button:hover {
-  background: #7c3aed;
-}
-
-.section {
+/* Ghost-themed Staff Page */
+.staff-section {
+  background: #0b0b12; /* dark, spooky background */
+  color: #e0e0ff; /* light ghostly text */
   padding: 50px 20px;
   text-align: center;
 }
 
-.card {
-  background: #141421;
+.staff-card {
+  background: rgba(30, 30, 50, 0.7); /* semi-transparent dark card */
   padding: 20px;
   margin: 20px auto;
-  width: 250px;
-  border-radius: 8px;
+  width: 220px;
+  border-radius: 10px;
+  display: inline-block;
+  box-shadow: 0 0 15px #8b5cf6; /* purple ghostly glow */
 }
 
-h1, h2, h3 {
-  margin: 10px 0;
+.staff-card img {
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  border: 2px solid #8b5cf6;
+  margin-bottom: 10px;
+}
+
+.staff-card h3 {
+  margin: 5px 0;
+  font-size: 18px;
+  color: #fff;
+}
+
+.staff-card p {
+  margin: 2px 0;
+  font-size: 14px;
+  color: #aaa;
 }
