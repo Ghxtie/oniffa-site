@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>ONI FFA Players</title>
+<style>
+
+body{
+background:#0f0f14;
+color:white;
+font-family:Arial;
+text-align:center;
+}
+
+nav a{
+margin:15px;
+color:white;
+text-decoration:none;
+}
+
+</style>
+</head>
+
+<body>
+
+<nav>
+<a href="index.html">Home</a>
+<a href="players.html">Players</a>
+<a href="staff.html">Staff</a>
+<a href="news.html">News</a>
+<a href="forums.html">Forums</a>
+</nav>
+
+<h1>Online Players</h1>
+
+<p id="list">Loading...</p>
+
+<script>
+
+fetch("https://api.mcsrvstat.us/2/play.oniffa.net")
+.then(res => res.json())
+.then(data => {
+
+if(data.players.list){
+document.getElementById("list").innerText =
+data.players.list.join(", ")
+}else{
+document.getElementById("list").innerText =
+"No players online"
+}
+
+})
+
+</script>
+
+</body>
+</html>
