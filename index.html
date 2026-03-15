@@ -2,24 +2,27 @@
 <html>
 <head>
 <title>ONI FFA</title>
+
 <style>
 
 body{
 font-family:Arial;
+margin:0;
 background:#0f0f14;
 color:white;
 text-align:center;
-margin:0;
 }
 
 nav{
-background:#151520;
-padding:20px;
+background:#141421;
+padding:15px;
 }
 
-nav h1{
-color:#8b5cf6;
-margin:0;
+nav a{
+color:white;
+margin:15px;
+text-decoration:none;
+font-weight:bold;
 }
 
 .hero{
@@ -28,47 +31,59 @@ padding:120px 20px;
 
 .button{
 background:#8b5cf6;
-color:white;
 padding:15px 30px;
-text-decoration:none;
 border-radius:6px;
-display:inline-block;
-margin-top:20px;
+color:white;
+text-decoration:none;
 }
 
-.stats{
-background:#141421;
-padding:40px;
-margin-top:60px;
+.server{
+margin-top:40px;
+font-size:20px;
 }
 
 </style>
+
 </head>
 
 <body>
 
 <nav>
-<h1>ONI FFA</h1>
+<a href="index.html">Home</a>
+<a href="players.html">Players</a>
+<a href="staff.html">Staff</a>
+<a href="news.html">News</a>
+<a href="forums.html">Forums</a>
 </nav>
 
 <div class="hero">
 
-<h2>Welcome to ONI FFA</h2>
+<h1>ONI FFA</h1>
 
-<p>The best Minecraft FFA server</p>
+<p>The next generation Minecraft FFA server</p>
 
-<a class="button">Server IP: play.oniffa.net</a>
+<a class="button">play.oniffa.net</a>
+
+<div class="server">
+
+<p>Players Online: <span id="players">Loading...</span></p>
+
+</div>
 
 </div>
 
-<div class="stats">
+<script>
 
-<h3>Server Stats</h3>
+fetch("https://api.mcsrvstat.us/2/play.oniffa.net")
+.then(res => res.json())
+.then(data => {
 
-<p>Online 24/7</p>
-<p>Competitive PvP</p>
+document.getElementById("players").innerText =
+data.players.online
 
-</div>
+})
+
+</script>
 
 </body>
 </html>
