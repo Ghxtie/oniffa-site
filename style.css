@@ -1,8 +1,8 @@
-/* Ghost-themed Staff Page */
+/* Ghost-themed Staff Page with Role Colors */
 body {
   margin: 0;
   font-family: 'Poppins', Arial, sans-serif;
-  background: #0b0b12;
+  background: linear-gradient(135deg, #0b0b12, #1c1c2c, #2b2b3b);
   color: #e0e0ff;
 }
 
@@ -28,8 +28,6 @@ nav a:hover {
 }
 
 .staff-section {
-  background: linear-gradient(135deg, #0b0b12, #1c1c2c);
-  color: #e0e0ff;
   padding: 60px 20px;
   text-align: center;
 }
@@ -37,51 +35,58 @@ nav a:hover {
 .staff-section h1 {
   font-size: 40px;
   margin-bottom: 40px;
-  color: #d9d9ff;
+  color: #fff;
   text-shadow: 0 0 10px #8b5cf6;
 }
 
 .staff-card {
-  background: rgba(30, 30, 50, 0.7);
   padding: 20px;
   margin: 20px;
   width: 220px;
   border-radius: 12px;
   display: inline-block;
-  box-shadow: 0 0 20px #8b5cf6;
+  box-shadow: 0 0 20px rgba(255,255,255,0.2);
   transition: transform 0.3s, box-shadow 0.3s;
 }
 
 .staff-card:hover {
   transform: translateY(-10px);
-  box-shadow: 0 0 25px #8b5cf6, 0 0 40px #00d9ff;
+  box-shadow: 0 0 25px #fff, 0 0 40px #00d9ff;
 }
 
 .staff-card img {
   width: 100px;
   height: 100px;
   border-radius: 50%;
-  border: 3px solid #8b5cf6;
+  border: 3px solid #fff;
   margin-bottom: 10px;
   transition: transform 0.3s, box-shadow 0.3s;
 }
 
 .staff-card img:hover {
   transform: scale(1.1);
-  box-shadow: 0 0 20px #8b5cf6, 0 0 30px #00d9ff;
+  box-shadow: 0 0 20px #fff, 0 0 30px #00d9ff;
 }
 
 .staff-card h3 {
   margin: 5px 0;
   font-size: 18px;
-  color: #fff;
 }
 
 .staff-card p {
   margin: 2px 0;
   font-size: 14px;
-  color: #aaa;
+  font-weight: bold;
 }
+
+/* Role colors */
+.owner { background: rgba(255,255,255,0.15); color: #fff; }
+.manager { background: rgba(255,192,203,0.15); color: #ffb6c1; }
+.administrator { background: rgba(144,238,144,0.15); color: #32cd32; }
+.headmod { background: rgba(255,165,0,0.15); color: #ffa500; }
+.moderator { background: rgba(173,216,230,0.15); color: #00bfff; }
+.helper { background: rgba(128,0,128,0.15); color: #dda0dd; }
+.trainee { background: rgba(144,238,144,0.15); color: #7cfc00; }
 
 @media screen and (max-width: 700px) {
   .staff-card {
@@ -93,7 +98,7 @@ nav a:hover {
 
 ---
 
-**Paste this in `staff.html`:**
+### **2️⃣ HTML** – paste this in `staff.html`
 
 ```html
 <!DOCTYPE html>
@@ -117,57 +122,90 @@ nav a:hover {
 <section class="staff-section">
 <h1>ONI FFA Staff</h1>
 
-<div class="staff-card">
+<div class="staff-card owner">
   <img src="https://crafatar.com/avatars/Ghxtie?size=100" alt="Ghxtie Skin">
-  <h3>Owner</h3>
-  <p>Ghxtie</p>
+  <h3>Ghxtie</h3>
+  <p>Owner</p>
 </div>
 
-<div class="staff-card">
+<div class="staff-card manager">
   <img src="https://crafatar.com/avatars/Cole?size=100" alt="Cole Skin">
-  <h3>Manager</h3>
-  <p>Cole</p>
+  <h3>Cole</h3>
+  <p>Manager</p>
 </div>
 
-<div class="staff-card">
+<div class="staff-card administrator">
   <img src="https://crafatar.com/avatars/Molten?size=100" alt="Molten Skin">
-  <h3>Administrator</h3>
-  <p>Molten</p>
-  <p>Riley</p>
+  <h3>Molten</h3>
+  <p>Administrator</p>
 </div>
 
-<div class="staff-card">
+<div class="staff-card administrator">
+  <img src="https://crafatar.com/avatars/Riley?size=100" alt="Riley Skin">
+  <h3>Riley</h3>
+  <p>Administrator</p>
+</div>
+
+<div class="staff-card headmod">
   <img src="https://crafatar.com/avatars/Omidsa?size=100" alt="Omidsa Skin">
-  <h3>Head Moderator</h3>
-  <p>Omidsa</p>
+  <h3>Omidsa</h3>
+  <p>Head Moderator</p>
 </div>
 
-<div class="staff-card">
+<div class="staff-card moderator">
   <img src="https://crafatar.com/avatars/Pheonix?size=100" alt="Pheonix Skin">
   <h3>Pheonix</h3>
   <p>Moderator</p>
 </div>
 
-<div class="staff-card">
+<div class="staff-card helper">
   <img src="https://crafatar.com/avatars/IslaSix?size=100" alt="Isla Six Skin">
-  <h3>Helper</h3>
-  <p>Isla Six</p>
+  <h3>Isla Six</h3>
+  <p>Helper</p>
 </div>
 
-<div class="staff-card">
-  <img src="https://crafatar.com/avatars/Airloee?size=100" alt="Airloee Skin">
-  <h3>Trainee</h3>
-  <p>Airloee</p>
-  <p>geoskuxxx</p>
-  <p>speed</p>
-  <p>Tiger</p>
-  <p>Toad</p>
-  <p>Yepico</p>
-  <p>space jockey</p>
- </div>
+<div class="staff-card trainee">
+  <img src="https://crafatar.com/avatars/speed?size=100" alt="speed Skin">
+  <h3>speed</h3>
+  <p>Trainee</p>
+</div>
+
+<div class="staff-card trainee">
+  <img src="https://crafatar.com/avatars/spacejockey?size=100" alt="space jockey Skin">
+  <h3>space jockey</h3>
+  <p>Trainee</p>
+</div>
+
+<div class="staff-card trainee">
+  <img src="https://crafatar.com/avatars/airloee?size=100" alt="airloee Skin">
+  <h3>airloee</h3>
+  <p>Trainee</p>
+</div>
+
+<div class="staff-card trainee">
+  <img src="https://crafatar.com/avatars/tiger?size=100" alt="tiger Skin">
+  <h3>tiger</h3>
+  <p>Trainee</p>
+</div>
+
+<div class="staff-card trainee">
+  <img src="https://crafatar.com/avatars/yepico?size=100" alt="yepico Skin">
+  <h3>yepico</h3>
+  <p>Trainee</p>
+</div>
+
+<div class="staff-card trainee">
+  <img src="https://crafatar.com/avatars/toad?size=100" alt="toad Skin">
+  <h3>toad</h3>
+  <p>Trainee</p>
+</div>
+
+<div class="staff-card trainee">
+  <img src="https://crafatar.com/avatars/geoskuxxx?size=100" alt="geoskuxxx Skin">
+  <h3>geoskuxxx</h3>
+  <p>Trainee</p>
+</div>
 
 </section>
-
 </body>
 </html>
-```
